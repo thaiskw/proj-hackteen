@@ -10,9 +10,17 @@
   padding: 10px;
   position: relative;
   display: inline-block;
+  transition: color 0.3s ease;
 }
 
-.custom-navbar .nav-link:hover{
+/* Estilo para quando o link está ativo ou com foco, mas sem mudar a cor permanente */
+.custom-navbar .nav-link:focus,
+.custom-navbar .nav-link:active {
+  color: #fff; /* Mantém a cor branca ao clicar ou focar */
+}
+
+/* Estilo para o hover (passar o mouse) */
+.custom-navbar .nav-link:hover {
   color: #028f76;
 }
 
@@ -27,31 +35,197 @@
   transition: width 0.3s ease-in-out;
 }
 
+/* Animação do hover */
 .custom-navbar .nav-link:hover::after {
   width: 100%;
 }
 
 .navbar-brand img {
-  margin-right: 8px;
   width: 50px;
+  margin-right: 10px;
+  display: block;
 }
 
-.d-inline-block{
+.d-inline-block {
   border-radius: 13px;
   width: 60px;
   height: 60px;
   margin-right: 3px;
 }
 
-#cadastro{
-  margin-left: 1260px;
+#navbarNav {
+  display: flex;
+  justify-content: flex-start; /* Garante que os itens da navbar fiquem alinhados à esquerda */
+  width: 100%;
 }
 
-.landing-banner {
-  background-size: cover;
-  background-image: url(https://d3p3fw3rutb1if.cloudfront.net/photos/0885cba3-b24b-42cc-b4bc-97d0ee94b596);
-  background-position: center;
-  min-height: 100vh;
-  padding: 60px 0;
+#cadastro {
+  margin-left: auto; /* Vai empurrar o link de cadastro para a direita */
+}
+
+/* Estilo da landing page */
+.landing-container {
+  position: relative;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+}
+
+.doguinho {
+  width: 100%;
+  height: auto;
+}
+
+.text-overlay {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
   color: white;
+  z-index: 1;
+}
+
+.title {
+  color: white;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  padding-top: 50px;
+}
+
+.description {
+  color: white;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+
+.landing-container {
+  position: relative; /* Necessário para que os elementos filhos possam ser posicionados dentro */
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+}
+
+.doguinho {
+  width: 100%;
+  height: auto;
+  position: absolute; /* Coloca a imagem no fundo */
+  top: 0;
+  left: 0;
+  z-index: -1; /* Garante que a imagem fique atrás dos outros conteúdos */
+}
+
+.text-overlay {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: white;
+  z-index: 1;
+}
+
+.features {
+  position: absolute;
+  top: 120px; /* Ajuste a posição conforme necessário */
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: white;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente para legibilidade */
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.features h3 {
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+}
+
+.features ul {
+  list-style: none;
+  padding: 0;
+}
+
+.features {
+  width: 400px;
+  height: 200px;
+  position: absolute;
+  top: 350px;
+  left: 350px;
+  transform: translateX(-50%);
+  text-align: center;
+  color: rgb(0, 0, 0);
+  z-index: 1;
+  background-color: #ffeaad;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.card{
+  width: 350px;
+  height: 350px;
+  position: absolute;
+  top: 600px;
+  right: 410px;
+  transform: translateX(-50%);
+}
+
+
+/*footer*/
+.footer {
+  background-color: #1c2130;
+  color: #fff;
+  padding: 40px 0;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.footer-logo-img {
+  max-width: 150px;
+}
+
+.footer-links ul,
+.footer-social ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li,
+.footer-social li {
+  margin: 10px 0;
+}
+
+.footer-links a,
+.footer-social a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer-links a:hover,
+.footer-social a:hover {
+  color: #ffeaad;
+}
+
+.footer-bottom {
+  border-top: 1px solid #555;
+  padding-top: 10px;
+  font-size: 12px;
+}
+
+footer{
+  margin-top: 1230px;
 }
