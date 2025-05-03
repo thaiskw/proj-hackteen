@@ -1,29 +1,32 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import CadastroCuidador from "./pages/CadastroCuidador";
-import Login from "./pages/Login";
+import Cadastro from "./pages/Cadastro";
 import Navbar from "./pages/Navbar";
 import LandingPage from "./pages/LandingPage";
 import Sobre from "./pages/Sobre";
 import Cuidador from "./pages/Cuidador";
-import Footer from "./pages/Footer";
+import Login from "./pages/Login";
 import "./App.css";
-import "./Login.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
     <BrowserRouter>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<LandingPage />} /> 
-        <Route path="/landingpage" element={<LandingPage />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/cadastro" element={<CadastroCuidador />} />
-        <Route path="/sobre" element={<Sobre />} />
-        <Route path="/cuidador" element={<Cuidador />} />
-      </Routes>
-      <Footer /> {}
+      <div className="app-wrapper d-flex flex-column min-vh-100">
+        <Navbar />
+        <div className="flex-grow-1">
+          <Routes>
+            <Route path="/" element={<LandingPage />} />
+            <Route path="/landingpage" element={<LandingPage />} />
+            <Route path="/cadastro" element={<Cadastro />} />
+            <Route path="/cadastrocuidador" element={<CadastroCuidador />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/sobre" element={<Sobre />} />
+            <Route path="/cuidador" element={<Cuidador />} />
+          </Routes>
+        </div>
+      </div>
     </BrowserRouter>
   );
 }
