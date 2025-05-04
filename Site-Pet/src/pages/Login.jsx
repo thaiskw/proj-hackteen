@@ -1,13 +1,13 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function Login() {
   const [form, setForm] = useState({
-    nome: "",
     email: "",
     senha: "",
-    confirmarSenha: "",
   });
+  const [errorMessage, setErrorMessage] = useState("");
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -15,13 +15,19 @@ function Login() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (form.senha !== form.confirmarSenha) {
-      alert("As senhas não coincidem!");
-      return;
-    }
 
-    console.log("Dados enviados:", form);
-    alert("Cadastro realizado com sucesso!");
+    const users = JSON.parse(localStorage.getItem("users")) || [];
+    
+    const user = users.find(
+      (user) => user.email === form.email && user.senha === form.senha
+    );
+
+    if (user) {
+      alert("Login bem-sucedido!");
+      navigate("/landingpage");
+    } else {
+      setErrorMessage("Email ou senha incorretos.");
+    }
   };
 
   return (
@@ -29,6 +35,8 @@ function Login() {
       <div className="form-container">
         <form onSubmit={handleSubmit} className="form-custom p-4 rounded shadow-lg">
           <h2 className="text-center mb-4">Login</h2>
+
+          {errorMessage && <div className="alert alert-danger">{errorMessage}</div>}
 
           <div className="mb-3">
             <label className="form-label">Email</label>
@@ -57,7 +65,6 @@ function Login() {
           <button type="submit" className="btn btn-custom w-100">
             Logar
           </button>
-          
           <center>
             <Link to="/cadastro" style={{ color: "white" }}>
               Não tem uma conta? Cadastre-se

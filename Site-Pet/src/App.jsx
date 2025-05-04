@@ -1,14 +1,14 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import CadastroCuidador from "./pages/CadastroCuidador";
 import Cadastro from "./pages/Cadastro";
 import Navbar from "./pages/Navbar";
 import LandingPage from "./pages/LandingPage";
 import Sobre from "./pages/Sobre";
 import Cuidador from "./pages/Cuidador";
 import Login from "./pages/Login";
-import "./App.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import "./App.css";
 
 function App() {
   return (
@@ -20,7 +20,6 @@ function App() {
             <Route path="/" element={<LandingPage />} />
             <Route path="/landingpage" element={<LandingPage />} />
             <Route path="/cadastro" element={<Cadastro />} />
-            <Route path="/cadastrocuidador" element={<CadastroCuidador />} />
             <Route path="/login" element={<Login />} />
             <Route path="/sobre" element={<Sobre />} />
             <Route path="/cuidador" element={<Cuidador />} />

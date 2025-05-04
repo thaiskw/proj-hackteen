@@ -24,7 +24,7 @@ function Navbar() {
             <li className="nav-item">
               <Link className="nav-link" to="/sobre">Sobre</Link>
             </li>
-            <li className="nav-item" id="cadastro">
+            <li className="nav-item ms-lg-auto" id="cadastro">
               <Link className="nav-link" to="/cadastro">Cadastrar</Link>
             </li>
           </ul>

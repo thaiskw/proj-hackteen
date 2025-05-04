@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function Cadastro() {
   const [form, setForm] = useState({
@@ -8,6 +8,7 @@ function Cadastro() {
     senha: "",
     confirmarSenha: "",
   });
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -20,8 +21,18 @@ function Cadastro() {
       return;
     }
 
-    console.log("Dados enviados:", form);
+    const newUser = {
+      nome: form.nome,
+      email: form.email,
+      senha: form.senha,
+    };
+
+    const users = JSON.parse(localStorage.getItem("users")) || [];
+    users.push(newUser);
+    localStorage.setItem("users", JSON.stringify(users));
+
     alert("Cadastro realizado com sucesso!");
+    navigate("/login");
   };
 
   return (
@@ -82,9 +93,10 @@ function Cadastro() {
             Cadastrar
           </button>
           <center>
-          <Link to="/login" style={{ color: "white" }}>Já possui uma conta? Logar</Link>
+            <Link to="/login" style={{ color: "white" }}>
+              Já possui uma conta? Logar
+            </Link>
           </center>
-          
         </form>
       </div>
     </div>

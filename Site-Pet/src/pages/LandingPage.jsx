@@ -1,6 +1,5 @@
 import React from "react";
 
-
 const LandingPage = () => {
   return (
     <div className="landing-container">
@@ -10,6 +9,7 @@ const LandingPage = () => {
           Com a PetJanita's você encontra cuidadores de pets com facilidade, segurança e profissionalidade.
         </p>
       </div>
+
       <div className="features">
         <h3>Benefícios</h3>
         <ul>
@@ -18,8 +18,6 @@ const LandingPage = () => {
           <li>Encontre o melhor cuidado para o seu pet.</li>
         </ul>
       </div>
-      <img className="doguinho" src="./doguinho.jpeg" alt="Doguinho" />
-      
     </div>
   );
 };

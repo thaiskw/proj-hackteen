@@ -48,9 +48,8 @@ const caregivers = [
 const AnimalCaregivers = () => {
   return (
     <div id='fundo-cuidadores' style={{ padding: '20px', fontFamily: 'Arial' }}>
-      <h1>🐾 Cuidadores de Animais</h1>
+      <h1 style={{color: "white"}}>🐾 Cuidadores de Animais</h1>
 
-      {/* Container de cartões */}
       <div style={{
         display: 'flex',
         flexWrap: 'wrap',
