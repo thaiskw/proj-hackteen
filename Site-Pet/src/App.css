@@ -65,7 +65,7 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-image: url('./doguinho.jpeg');
+  background-image: url('/doguinho.jpeg');
   background-size: cover;
   background-position: center;
   padding: 20px;
