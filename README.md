@@ -64,7 +64,7 @@ Nosso projeto promove bem-estar animal e tranquilidade para os donos.
 **Vercel**: Acessando o link!
 **GitHub**: Clonando o repositório, acessando a página do projeto, instalando as dependências e rodando o servidor.
 
-- git clone https://github.com/seu-usuario/Site-Pet.git
+- git clone https://github.com/thaiskw/proj-hackteen
 
 - cd Site-Pet
 
