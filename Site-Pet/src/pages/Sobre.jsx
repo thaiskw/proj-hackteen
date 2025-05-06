@@ -36,7 +36,7 @@ const HistoriaEmpresa = () => {
         <h2 style={{ color: '#ffeaad' }}>Contatos</h2>
         <p style={{ color: 'white' }}>
           Entre em contato conosco por nosso email:
-          <a href="mailto:petjanitas@gmail.com" style={{ color: '#ffeaad' }}>petjunitas@gmail.com</a>
+          <a href="mailto:petjanitas@gmail.com" style={{ color: '#ffeaad' }}>petjanitas@gmail.com</a>
         </p>
       </section>
 
