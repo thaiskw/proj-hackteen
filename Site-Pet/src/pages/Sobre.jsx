@@ -36,12 +36,12 @@ const HistoriaEmpresa = () => {
         <h2 style={{ color: '#ffeaad' }}>Contatos</h2>
         <p style={{ color: 'white' }}>
           Entre em contato conosco por nosso email:
-          <a href="mailto:petjunitas@gmail.com" style={{ color: '#ffeaad' }}>petjunitas@gmail.com</a>
+          <a href="mailto:petjanitas@gmail.com" style={{ color: '#ffeaad' }}>petjunitas@gmail.com</a>
         </p>
       </section>
 
       <footer style={{ textAlign: 'center', marginTop: '40px', fontSize: '14px', color: '#ffeaad' }}>
-        <p>&copy; 2025 Empresa Pet Junita's. Todos os direitos reservados.</p>
+        <p>&copy; 2025 Empresa Pet Janita's. Todos os direitos reservados.</p>
       </footer>
     </div>
   );
