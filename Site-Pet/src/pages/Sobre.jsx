@@ -5,7 +5,7 @@ const HistoriaEmpresa = () => {
   return (
     <div style={{ fontFamily: 'Arial, sans-serif', padding: '20px', maxWidth: '800px', margin: '0 auto' }}>
       <header style={{ textAlign: 'center', marginBottom: '30px', color: '#ffeaad' }}>
-        <h1>História da Empresa Pet Junita's</h1>
+        <h1>História da Empresa Pet Janita's</h1>
       </header>
 
       <section style={{ marginBottom: '20px' }}>
